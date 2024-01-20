@@ -1,0 +1,37 @@
+Data too long for column 'patronymic' at row 1
+Data too long for column 'patronymic' at row 1
+Data too long for column 'patronymic' at row 1
+Data too long for column 'patronymic' at row 1
+Data too long for column 'patronymic' at row 1
+Data too long for column 'patronymic' at row 1
+Data too long for column 'patronymic' at row 1
+Data too long for column 'patronymic' at row 1
+Data too long for column 'patronymic' at row 1
+Data too long for column 'patronymic' at row 1
+Входная строка имела неверный формат.
+Входная строка имела неверный формат.
+Входная строка имела неверный формат.
+Входная строка имела неверный формат.
+Входная строка имела неверный формат.
+Входная строка имела неверный формат.
+Входная строка имела неверный формат.
+Входная строка имела неверный формат.
+Column 'surname' cannot be null
+Column 'surname' cannot be null
+Column 'surname' cannot be null
+Column 'surname' cannot be null
+Column 'surname' cannot be null
+Column 'surname' cannot be null
+Column 'firstName' cannot be null
+Column 'surname' cannot be null
+Unknown system variable 'auto_increment'
+Unknown system variable '_cnet_param_identity'
+Unknown system variable 'auto_increment'
+Authentication to host 'localhost' for user 'user' using method 'caching_sha2_password' failed with message: Access denied for user 'user'@'localhost' (using password: YES)
+Authentication to host 'localhost' for user 'user' using method 'caching_sha2_password' failed with message: Access denied for user 'user'@'localhost' (using password: YES)
+Authentication to host 'localhost' for user 'user' using method 'caching_sha2_password' failed with message: Access denied for user 'user'@'localhost' (using password: YES)
+Authentication to host 'localhost' for user 'user' using method 'caching_sha2_password' failed with message: Access denied for user 'user'@'localhost' (using password: YES)
+Authentication to host 'localhost' for user 'user' using method 'caching_sha2_password' failed with message: Access denied for user 'user'@'localhost' (using password: YES)
+Authentication to host 'localhost' for user 'user' using method 'caching_sha2_password' failed with message: Access denied for user 'user'@'localhost' (using password: YES)
+Connection must be valid and open.
+Authentication to host 'localhost' for user 'user' using method 'caching_sha2_password' failed with message: Access denied for user 'user'@'localhost' (using password: YES)

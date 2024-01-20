@@ -1,0 +1,2 @@
+Database=localdb;DataSource=localhost;User=user;Password=user
+Database=local;DataSource=localhost;User=user;Password=user

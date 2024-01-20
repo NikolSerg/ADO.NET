@@ -1,0 +1,19 @@
+﻿<Window x:Class="ShopKindaThing.OrdersTable"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShopKindaThing"
+        mc:Ignorable="d"
+        Title="OrdersTable" Height="450" Width="498">
+    <Grid>
+        <DataGrid x:Name="ordersDataGrid" ItemsSource="{Binding}" AutoGenerateColumns="false" CanUserAddRows="False" CanUserDeleteRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Order ID" Binding="{Binding id}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Product Code" Width="0.5*" Binding="{Binding gCode}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Product Name" Width="1*" Binding="{Binding gName}" IsReadOnly="true"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
