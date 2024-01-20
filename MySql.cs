@@ -208,15 +208,15 @@ phoneNumber = @phoneNumber, eMail = @eMail where id = @id";
     public class Orders : MySql
     {
         public static event Action UpdateConnStatus;
-        public Task Loader { get; private set; }
+        //public Task Loader { get; private set; }
+        public bool IsSetted { get; private set; }
         public Orders(string connstring) : base(connstring)
         {
+            UpdateConnStatus?.Invoke();
             if (isOpen)
             {
                 if (!Exist()) CreateTable();
 
-                Loader = SetAdapter();
-                Loader.ContinueWith(delegate { UpdateConnStatus?.Invoke(); });
             }
         }
 
@@ -254,10 +254,11 @@ phoneNumber = @phoneNumber, eMail = @eMail where id = @id";
 
         }
 
-        async Task SetAdapter()
+        public void SetAdapter(string eMail)
         {
+            Dt.Clear();
             //Select
-            string sqlComm = $"Select * from Orders";
+            string sqlComm = $"Select * from Orders where eMail = '{eMail}'";
             string str = null;
             adapter.SelectCommand = new MySqlCommand(sqlComm, Connection);
 
@@ -323,7 +324,9 @@ phoneNumber = @phoneNumber, eMail = @eMail where id = @id";
                 catch (Exception e) { WriteException(e); }
             }
 
-            await adapter.FillAsync(Dt);
+            adapter.Fill(Dt);
+            IsSetted = true;
+
         }
     }
 

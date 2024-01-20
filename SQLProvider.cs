@@ -91,14 +91,7 @@ namespace ShopKindaThing
                             }
                             break;
                         case "ordersDataGrid":
-                            if (Orders.Loader.IsCompleted)
                                 grid.DataContext = Orders.Dt.DefaultView;
-                            
-                            else
-                            {
-                                Orders.Loader.Wait();
-                                grid.DataContext = Orders.Dt.DefaultView;
-                            }
                             break;
                         default:
                             MessageBox.Show("Table doesn't exist", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -113,7 +106,8 @@ namespace ShopKindaThing
         {
             await grid.Dispatcher.InvokeAsync(() =>
             {
-                grid.DataContext = GetDataView(eMail).DefaultView;
+                Orders.SetAdapter(eMail);
+                grid.DataContext = Orders.Dt.DefaultView;
             });
         }
 
