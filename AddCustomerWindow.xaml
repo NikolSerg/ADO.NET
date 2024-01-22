@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="Add Customer" Height="497" Width="286">
     <Grid>
-        <StackPanel Margin="0,0,0,414" HorizontalAlignment="Center" Width="286" Orientation="Vertical">
+        <StackPanel HorizontalAlignment="Center" Width="286" Orientation="Vertical" VerticalAlignment="Top" Height="67">
             <Label x:Name="surnameFieldLabel" Target="{Binding ElementName=surnameField}" Content="Surname" Width="258" MouseLeftButtonDown="Label_MouseLeftButtonDown"/>
             <TextBox x:Name="surnameField" TextWrapping="Wrap" Width="258" Height="20" LostFocus="NamesField_LostFocus" Tag="Surname"/>
         </StackPanel>
-        <StackPanel Margin="0,72,0,342" HorizontalAlignment="Center" Width="286" Orientation="Vertical">
+        <StackPanel Margin="0,72,0,342" HorizontalAlignment="Center" Width="286" Orientation="Vertical" VerticalAlignment="Stretch">
             <Label x:Name="firstNameLabel" Target="{Binding ElementName=firstNameField}" Content="First Name" Width="258" MouseLeftButtonDown="Label_MouseLeftButtonDown"/>
             <TextBox x:Name="firstNameField" TextWrapping="Wrap" Width="258" Height="20" LostFocus="NamesField_LostFocus" Tag="First Name"/>
         </StackPanel>

@@ -7,13 +7,15 @@
         mc:Ignorable="d"
         Title="OrdersTable" Height="450" Width="498">
     <Grid>
-        <DataGrid x:Name="ordersDataGrid" ItemsSource="{Binding}" AutoGenerateColumns="false" CanUserAddRows="False" CanUserDeleteRows="False">
+        <DataGrid x:Name="ordersDataGrid" ItemsSource="{Binding}" AutoGenerateColumns="false" CanUserAddRows="False" CanUserDeleteRows="False" Margin="0,0,0,88" GotFocus="ordersDataGrid_GotFocus">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Order ID" Binding="{Binding id}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Product Code" Width="0.5*" Binding="{Binding gCode}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Product Name" Width="1*" Binding="{Binding gName}" IsReadOnly="true"/>
+                <DataGridTextColumn Header="Product Code" Width="0.5*" Binding="{Binding gCode}"/>
+                <DataGridTextColumn Header="Product Name" Width="1*" Binding="{Binding gName}"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="addOrderButton" Content="New Order" HorizontalAlignment="Left" Margin="22,372,0,0" VerticalAlignment="Top" Height="30" Width="112" Click="addOrderButton_Click"/>
+        <Button x:Name="deleteButton" Content="Delete Order" HorizontalAlignment="Left" Margin="356,372,0,0" VerticalAlignment="Top" Height="30" Width="112" Click="deleteButton_Click" IsEnabled="False"/>
 
     </Grid>
 </Window>

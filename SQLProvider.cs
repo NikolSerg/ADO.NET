@@ -46,6 +46,16 @@ namespace ShopKindaThing
             else MessageBox.Show("Customer is already exist", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
+        public static void AddOrder(string[] order)
+        {
+            DataRow row = Orders.Dt.NewRow();
+            row[1] = order[0];
+            row[2] = Convert.ToInt32(order[1]);
+            row[3] = order[2];
+            Orders.Dt.Rows.Add(row);
+            Orders.Update();
+        }
+
         public static bool CustomersIsOpen()
         {
             return Customers != null && Customers.IsOpen;
@@ -149,7 +159,11 @@ namespace ShopKindaThing
             Customers.Update();
         }
 
-        
+        public static void OrdersDeleteRow(DataRowView row)
+        {
+            row.Row.Delete();
+            Orders.Update();
+        }
         
     }
 }
